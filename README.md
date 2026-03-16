@@ -1,9 +1,9 @@
-# homebrew-gws
+# homebrew-gtab
 
-Homebrew tap for [gws](https://github.com/Franvy/gws) — Ghostty workspace manager.
+Homebrew tap for [gtab](https://github.com/Franvy/gtab) — Ghostty tab workspace manager.
 
 ## Install
 
 ```bash
-brew install Franvy/gws/gws
+brew install Franvy/gtab/gtab
 ```
