@@ -5,6 +5,5 @@ Homebrew tap for [gws](https://github.com/Franvy/gws) — Ghostty workspace mana
 ## Install
 
 ```bash
-brew tap Franvy/gws
-brew install gws
+brew install Franvy/gws/gws
 ```
