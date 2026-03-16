@@ -1,8 +1,8 @@
 class Gtab < Formula
   desc "Ghostty tab workspace manager — save and restore terminal window layouts"
   homepage "https://github.com/Franvy/gtab"
-  url "https://github.com/Franvy/gtab/archive/refs/tags/v1.1.0.tar.gz"
-  sha256 "4872f906104743a391756f1115e1dccf410c3e34ad92d8dda9da860a1ff8c070"
+  url "https://github.com/Franvy/gtab/archive/refs/tags/v1.2.0.tar.gz"
+  sha256 "6c9f69ebd1fbf84c3a485fdbc2d625f06e9c34e1b534556062ae720cc7fd1109"
   license "MIT"
 
   def install
