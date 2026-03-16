@@ -5,5 +5,6 @@ Homebrew tap for [gtab](https://github.com/Franvy/gtab) — Ghostty tab workspac
 ## Install
 
 ```bash
-brew install Franvy/gtab/gtab
+brew tap Franvy/gtab
+brew install gtab
 ```
