@@ -2,9 +2,9 @@ class Gtab < Formula
   desc "Ghostty tab workspace manager with an interactive TUI"
   homepage "https://github.com/Franvy/gtab"
   url "https://github.com/Franvy/gtab.git",
-      tag: "v1.3.1",
-      revision: "650e7d3747b85d783f2a0211b255d5e38395c3ed"
-  version "1.3.1"
+      tag: "v1.3.2",
+      revision: "52ab6f22d7c4ca1baf67c61def1340a68cf7e8d9"
+  version "1.3.2"
   license "MIT"
   head "https://github.com/Franvy/gtab.git", branch: "main"
 
@@ -17,8 +17,8 @@ class Gtab < Formula
 
   def caveats
     <<~EOS
-      Run this once to enable the built-in global hotkey helper:
-        gtab hotkey install
+      Run this once to enable the default Ghostty-local Cmd+G:
+        gtab init
 
       Workspaces are stored in ~/.config/gtab/ by default.
       Override with: export GTAB_DIR="/your/path"
@@ -38,13 +38,12 @@ class Gtab < Formula
     assert_match version.to_s, shell_output("#{bin}/gtab --version")
     assert_match "demo", shell_output("#{bin}/gtab list")
     assert_match "close_tab = off", shell_output("#{bin}/gtab set")
-    assert_match "launch_mode = smart", shell_output("#{bin}/gtab set")
-    assert_match "global_shortcut = cmd+g", shell_output("#{bin}/gtab set")
+    assert_match "ghostty_shortcut = cmd+g", shell_output("#{bin}/gtab set")
+    assert_match "Ghostty-local shortcut is the default fast path", shell_output("#{bin}/gtab set")
 
     system bin/"gtab", "set", "close_tab", "on"
     assert_match "close_tab = on", shell_output("#{bin}/gtab set")
 
-    system bin/"gtab", "set", "launch_mode", "window"
-    assert_match "launch_mode = window", shell_output("#{bin}/gtab set")
+    assert_match "launch_mode has been removed", shell_output("#{bin}/gtab set launch_mode window", 1)
   end
 end
