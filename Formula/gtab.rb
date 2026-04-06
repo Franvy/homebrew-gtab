@@ -3,7 +3,7 @@ class Gtab < Formula
   homepage "https://github.com/Franvy/gtab"
   url "https://github.com/Franvy/gtab.git",
       tag: "v1.4.1",
-      revision: "0638964c1e12ab2d2b62b41fe4ea8e84dfb82de9"
+      revision: "0638964fe3a7c3dcaac68d4e8e304ce31365e069"
   version "1.4.1"
   license "MIT"
   head "https://github.com/Franvy/gtab.git", branch: "main"
