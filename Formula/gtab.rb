@@ -1,12 +1,12 @@
 class Gtab < Formula
   desc "Ghostty tab workspace manager with an interactive TUI"
   homepage "https://github.com/Franvy/gtab"
-  version "1.4.4"
+  version "1.5.0"
   license "MIT"
 
   on_arm do
-    url "https://github.com/Franvy/gtab/releases/download/v1.4.4/gtab-1.4.4-aarch64-apple-darwin.tar.gz"
-    sha256 "f647a32fb6739dc57af04a30a701c79f7bfc9fe94fadad1971f3a4cb4aa652e1"
+    url "https://github.com/Franvy/gtab/releases/download/v1.5.0/gtab-1.5.0-aarch64-apple-darwin.tar.gz"
+    sha256 "43fc26e12ecd7f572380f49399f9aa312e49ede8878ce890038584be3550ef92"
   end
 
   depends_on :macos
