@@ -1,12 +1,12 @@
 class Gtab < Formula
   desc "Ghostty tab workspace manager with an interactive TUI"
   homepage "https://github.com/Franvy/gtab"
-  version "1.7.0"
+  version "1.8.0"
   license "MIT"
 
   on_arm do
-    url "https://github.com/Franvy/gtab/releases/download/v1.7.0/gtab-1.7.0-aarch64-apple-darwin.tar.gz"
-    sha256 "03a585456e390407c5fb29170700a8fb50f3a00c47536a39bce04fc5c3d87a91"
+    url "https://github.com/Franvy/gtab/releases/download/v1.8.0/gtab-1.8.0-aarch64-apple-darwin.tar.gz"
+    sha256 "49f10b376c74ed9821f40d012a344e9661ab819898186b20bd15f7046fc7322f"
   end
 
   depends_on :macos
@@ -39,7 +39,10 @@ class Gtab < Formula
     assert_match "demo", shell_output("#{bin}/gtab list")
     assert_match "close_tab = off", shell_output("#{bin}/gtab set")
     assert_match "ghostty_shortcut = cmd+g", shell_output("#{bin}/gtab set")
-    assert_match "Ghostty-local shortcut is the default fast path", shell_output("#{bin}/gtab set")
+    assert_match "shortcut_mode = text", shell_output("#{bin}/gtab set")
+
+    assert_match "_gtab_launch_widget", shell_output("#{bin}/gtab shell-init zsh")
+    assert_match "unsupported shell", shell_output("#{bin}/gtab shell-init tcsh 2>&1", 1)
 
     system bin/"gtab", "set", "close_tab", "on"
     assert_match "close_tab = on", shell_output("#{bin}/gtab set")
