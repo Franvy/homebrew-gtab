@@ -6,6 +6,11 @@ class Gtab < Formula
   sha256 "526e5038ee6512210e116104d3d80d9a4a201e73cb78a699994202dc44b74419"
   license "MIT"
 
+  bottle do
+    root_url "https://github.com/Franvy/gtab/releases/download/v1.8.4"
+    sha256 cellar: :any_skip_relocation, all: "e9e243aa6b2eba5e9525f4143d1e3abfb5c4a26138cfc647ac3b9acf277444ea"
+  end
+
   depends_on arch: :arm64
   depends_on :macos
 
